@@ -20,42 +20,37 @@
   font: inherit;
 }
 
-body {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  background-color: var(--eggshell);
-}
-
 .grid-flow {
   display: grid;
   align-content: start;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .main-container {
-  display: grid;
-  align-content: start;
-  gap: 1rem;
+}
+
+.container-aux {
+  width: 85%;
+  /* display: flex;
+  flex-direction: column; */
   background-color: var(--white);
-  border-radius: 1rem;
-  overflow: hidden;
-  padding: 2.5rem;
-  width: 750px;
-  margin: 5rem 0;
+  /* border-radius: 1rem; */
+  margin: auto;
 }
 
 img {
-  border-radius: 1rem;
+  border-radius: 0;
   width: 100%;
-  height: 300px;
-  background-size: cover;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
 }
 
 .title {
   color: var(--darkcharcoal);
   font-weight: 500;
-  font-size: 2.3em;
+  font-size: 2em;
+  margin-top: 1rem;
   font-family: var(--youngSerif);
 }
 
@@ -84,6 +79,7 @@ img {
 .prep-list {
   color: var(--wengebrown);
   padding-left: 1.5rem;
+  gap: 1rem;
 }
 
 .prep-list li {
@@ -153,11 +149,64 @@ ol li > span {
   border-bottom: 1px solid var(--lightgrey);
 }
 
+.table-row:last-of-type {
+  border-bottom: none;
+}
+
 .nutrition-table .table-row > * {
   width: 100%;
   margin: auto;
 }
 
-.table-row:last-of-type {
-  border-bottom: none;
+hr {
+  height: 2px;
+  width: 100%;
+  border-style: solid;
+  border-color: var(--lightgrey);
+  margin: 5px auto;
+}
+
+@media (min-width: 1440px) {
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--eggshell);
+  }
+
+  img {
+    border-radius: 1rem;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+  }
+  .main-container {
+    margin: 5rem 0 0 0;
+    font-size: 1em;
+    width: 750px;
+  }
+  .title {
+    margin-top: 0;
+  }
+
+  .container-aux {
+    width: 750px;
+    font-size: 1em;
+    padding: 2.5rem;
+    border-end-start-radius: 1rem;
+    border-end-end-radius: 1rem;
+  }
+
+  .grid-flow {
+    gap: 1rem;
+  }
+
+  .container-img {
+    padding: 2.5rem 2.5rem 0 2.5rem;
+    background-color: var(--white);
+    border-start-start-radius: 1rem;
+    border-start-end-radius: 1rem;
+    margin-bottom: 0;
+    gap: 0;
+  }
 }
